@@ -15,7 +15,7 @@ public class RangeEnemy : MonoBehaviour {
     public float startTimeBtwWShots;
     public GameObject projecitile;
     public Transform firePoint;
-    public float bulletForce = 20f;
+    public float bulletForce;
 
 	// Use this for initialization
 	void Start () {
