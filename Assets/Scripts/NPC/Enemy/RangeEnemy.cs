@@ -56,7 +56,10 @@ public class RangeEnemy : MonoBehaviour
             timeBtwShots -= Time.deltaTime;
         }
 
+        
+
 
     }
+
 
 }
