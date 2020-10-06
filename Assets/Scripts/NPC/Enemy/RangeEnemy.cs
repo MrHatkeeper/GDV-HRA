@@ -9,6 +9,8 @@ public class RangeEnemy : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
+
+
     public GameObject projectile;
     public float timeBtwShots;
     public float startTimeBtwShots;
@@ -22,6 +24,7 @@ public class RangeEnemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        timeBtwShots = startTimeBtwShots;
     }
 
     // Update is called once per frame
@@ -41,6 +44,8 @@ public class RangeEnemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
+
+
         if(timeBtwShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
@@ -48,7 +53,7 @@ public class RangeEnemy : MonoBehaviour
         }
         else
         {
-            startTimeBtwShots -= Time.deltaTime;
+            timeBtwShots -= Time.deltaTime;
         }
 
 
